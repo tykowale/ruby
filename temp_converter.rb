@@ -5,16 +5,21 @@ def convert()
 
 	conv_choice = gets.chomp.downcase
 
-	print "Enter a temperature ==>"
+	def ask_temp
+		puts "Enter a temperature ==>"
+		num = gets.chomp.to_i
+		return num
+	end
 
-	num = gets.chomp.to_i
-
-	if conv_choice == 'a'
-		return (num - 32) / 1.8
-	elsif conv_choice == 'b'
-		return (num * 1.8) + 32
+	case conv_choice
+	when 'a'
+		(ask_temp - 32) / 1.8
+	when 'b'
+		(ask_temp * 1.8) + 32
 	else
+		puts
 		puts "Please enter 'A' or 'B'"
+		puts
 		convert()
 	end
 end
