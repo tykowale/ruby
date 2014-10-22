@@ -12,5 +12,3 @@ def palindrome?(sentence)
   end 
   return pal  
 end
-
-puts palindrome?('racecarz')
