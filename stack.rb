@@ -17,11 +17,4 @@ class Stack
 	end
 end
 
-stack = Stack.new
-stack.append(7)
-stack.append('two')
-stack.append(1.0)
-stack.pop
-stack.show
-puts
 
