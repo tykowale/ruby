@@ -1,4 +1,4 @@
-arr1 = [1,2,3,3,4]
+arr1 = [1,2,3,3,4,4,4,4]
 
 def mode(arr)
   freq = arr.inject(Hash.new(0)) { |num, count| num[count] += 1; num }
@@ -12,7 +12,7 @@ def median(arr)
   if arr.length.odd?
     arr[mid]
   else
-    return (arr[mid] + arr[mid - 1]) / 2
+    return (arr[mid] + arr[mid - 1]) / 2.to_f
   end
 
 end
@@ -22,6 +22,8 @@ def mean(arr)
   return sum.to_f / arr.length
 end
 
-puts median(arr1)
+puts "The mode is #{mode(arr1)}"
+puts "The mean is #{mean(arr1)}"
+puts "The median is #{median(arr1)}"
 
 
