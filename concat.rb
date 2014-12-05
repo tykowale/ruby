@@ -4,4 +4,4 @@ def sentence_maker(*words)
 
 end
 
-puts sentence_maker(["does", "this", "thing" "work?"])
+puts sentence_maker(["does", "this", "thin" "work?"])
