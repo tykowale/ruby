@@ -10,11 +10,19 @@ f = File.open("./sudoku.txt")
 
 f_lines = f.read.split("\n")
 
-strings = f_lines.each do |line|
+f_lines.each do |line|
   line.gsub!('+', '')
   line.gsub!('-', '')
   line.gsub!('|', '')
   line.gsub!('  ', '0')
+  line.gsub!(/\s+/, "")
 end
 
-p f_lines
+board = []
+f_lines.each do |line|
+  if line.size > 0
+    board.push(line.chars.map(&:to_i))
+  end
+end
+
+print board
